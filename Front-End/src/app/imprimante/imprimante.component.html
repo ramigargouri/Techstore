@@ -1,0 +1,19 @@
+<div class="container">
+    <div  id="nos-produit">
+        <a routerLink="/imprimante">Nos Imprimantes</a>
+    </div>
+    <app-pnavbar></app-pnavbar>
+    <div class="row">
+        <div class="col-3" *ngFor="let imp of imprimantes">
+            <div class="card text-center" style="width: 17rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{imp.nom}}</h5>
+                  <img class="product__image" [src]="imp.url" width="75%" margin-left="-10%" margin-right="-10%" margin-top="-5px"margin-bottom="30px" max-width="none">
+                  <p class="card-text"><br>{{imp.description}}
+                    <br><br><br><br><br>Prix: {{imp.prix}}<br></p>
+                    <a [href]="imp.page" class="btn" style="color: #38ADA9;">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+#nv
+{
+    font-family:'Poppins';
+    font-size: 22px;
+    color: #38ADA9;
+    text-align: center;
+}
+
+#accueil
+{
+    color: #38ADA9;
+}
+
+#produits
+{
+    color: #38ADA9;
+}
+
+#icon
+{
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+footer
+{
+    background-color: #38ADA9;
+    color: black;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#mail
+{
+    color: black;
+}
+
+#marque
+{
+    font-family:'Poppins';
+    font-size: 22px;
+    color: #38ADA9;
+    text-align: center;
+}
+

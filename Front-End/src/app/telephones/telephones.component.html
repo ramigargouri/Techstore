@@ -1,0 +1,19 @@
+<div class="container">
+    <div  id="nos-produit">
+        <a routerLink="/telephone">Nos Telephones Protables</a>
+    </div>
+    <app-pnavbar></app-pnavbar>
+    <div class="row">
+        <div class="col-3" *ngFor="let tel of telephones">
+            <div class="card text-center" style="width: 17rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{tel.nom}}</h5>
+                  <img class="product__image" [src]="tel.url" width="75%" margin-left="-10%" margin-right="-10%" margin-top="-5px"margin-bottom="30px" max-width="none">
+                  <p class="card-text"><br>{{tel.description}}
+                    <br><br><br><br><br>Prix: {{tel.prix}}<br></p>
+                    <a href="" class="btn" style="color: #38ADA9;">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

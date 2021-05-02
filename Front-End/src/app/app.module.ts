@@ -20,6 +20,7 @@ import { CconfirmeeComponent } from './cconfirmee/cconfirmee.component';
 import { MescommandesComponent } from './mescommandes/mescommandes.component';
 import { PayementComponent } from './payement/payement.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
+import { DetailproduitComponent } from './detailproduit/detailproduit.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AuthentificationComponent } from './authentification/authentification.c
     CconfirmeeComponent,
     MescommandesComponent,
     PayementComponent,
-    AuthentificationComponent
+    AuthentificationComponent,
+    DetailproduitComponent
   ],
   imports: [
     BrowserModule,

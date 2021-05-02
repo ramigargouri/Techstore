@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import ordinateur from '../_files/ordinateur.json'
+import ordinateur from '../_files/type.json'
 
 @Component({
   selector: 'app-ordinateur',
@@ -7,10 +7,16 @@ import ordinateur from '../_files/ordinateur.json'
   styleUrls: ['./ordinateur.component.css']
 })
 export class OrdinateurComponent implements OnInit {
-  ordinateurs:{nom :string,description: string,url:string,prix:string}[]=ordinateur;
+  ordinateurs:{ref:string,nom :string,description: string,prix:string,image:string}[]=ordinateur;
   constructor() { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    var url = 'http://127.0.0.1:8000/techstore/produits/ordinateur'
+    await fetch(url);
   }
-
+  async  detailprd(ref : string)
+  {
+    var url = 'http://127.0.0.1:8000/techstore/produits/detail/?ref='+String(ref);
+    await fetch(url);
+  }
 }

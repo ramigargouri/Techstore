@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import televiseur from '../_files/televiseur.json'
+import televiseur from '../_files/type.json'
 
 @Component({
   selector: 'app-televiseur',
@@ -7,10 +7,16 @@ import televiseur from '../_files/televiseur.json'
   styleUrls: ['./televiseur.component.css']
 })
 export class TeleviseurComponent implements OnInit {
-  televiseurs:{nom :string,description: string,url:string,prix:string}[]=televiseur;
+  televiseurs:{ref:string,nom :string,description: string,prix:string,image:string}[]=televiseur;
   constructor() { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    var url = 'http://127.0.0.1:8000/techstore/produits/téléviseur'
+    await fetch(url);
   }
-
+  async  detailprd(ref : string)
+  {
+    var url = 'http://127.0.0.1:8000/techstore/produits/detail/?ref='+String(ref);
+    await fetch(url);
+  }
 }

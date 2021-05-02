@@ -16,6 +16,7 @@ import { CconfirmeeComponent } from './cconfirmee/cconfirmee.component';
 import { MescommandesComponent } from './mescommandes/mescommandes.component';
 import { PayementComponent } from './payement/payement.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
+import { DetailproduitComponent } from './detailproduit/detailproduit.component';
 
 const routes: Routes = [
   { path:'produits', component: ProduitsComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path:'confirmé', component : CconfirmeeComponent},
   { path:'commandes', component : MescommandesComponent},
   { path:'payement', component : PayementComponent},
-  { path:'s\'authentifier', component : AuthentificationComponent}
+  { path:'s\'authentifier', component : AuthentificationComponent},
+  { path:'detail', component : DetailproduitComponent}
 ];
 
 @NgModule({

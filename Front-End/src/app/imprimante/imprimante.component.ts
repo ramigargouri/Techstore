@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import imprimante from '../_files/imprimante.json'
+import imprimante from '../_files/type.json'
 
 @Component({
   selector: 'app-imprimante',
@@ -7,10 +7,16 @@ import imprimante from '../_files/imprimante.json'
   styleUrls: ['./imprimante.component.css']
 })
 export class ImprimanteComponent implements OnInit {
-  imprimantes:{nom :string,description: string,url:string,prix:string,page:string}[]=imprimante;
+  imprimantes:{ref:string,nom :string,description: string,prix:string,image:string}[]=imprimante;
   constructor() { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    var url = 'http://127.0.0.1:8000/techstore/produits/imprimante'
+    await fetch(url);
   }
-
+  async  detailprd(ref : string)
+  {
+    var url = 'http://127.0.0.1:8000/techstore/produits/detail/?ref='+String(ref);
+    await fetch(url);
+  }
 }
